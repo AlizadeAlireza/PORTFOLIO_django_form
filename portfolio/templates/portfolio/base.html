@@ -1,0 +1,34 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/bootstrap.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/fontawesome.css' %}">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'portfolio:index' %}">RP Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'portfolio:index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'blog:index' %}" class="nav-link">Blog</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+
+</nav>
+
+<div>
+    {% block page_content %}{% endblock %}
+</div>
+
+<script src="{% static 'portfolio/js/jquery-3.6.0.min.js' %}" ></script>
+<script src="{% static 'portfolio/js/bootstrap.bundle.js' %}" ></script>
+<script src="{% static 'portfolio/js/fontawesome.js' %}" ></script>
+<script src="{% static 'portfolio/js/main.js' %}" ></script>
